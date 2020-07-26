@@ -18,6 +18,7 @@ Change the following four variables in the gitproject.bat file according to your
 
 
 ## How to run
+The code has only been designed for and tested on Windows.
 After the requirements are met as descriped in Setup, open the command line and type in ``gitproject PROJECTNAME``, where PROJECTNAME stands for the name of the repository that will be created locally and on your Github account.
 
 ![Screenshot](https://github.com/Doometnick/AutoGitRepo/blob/master/img/gitproject.PNG)
