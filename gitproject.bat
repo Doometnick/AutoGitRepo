@@ -3,19 +3,22 @@ Call :createproject %~1
 EXIT /B %ERRORLEVEL%
 
 :createproject
-SET BASE_FOLDER="C:\Users\brand\Documents\MyProjects\"
-SET PROJECT_NAME=%BASE_FOLDER%%~1
-SET GIT_CONNECT_SCRIPT="C:/BAT/github_connect.py"
-SET GITHUB_USER_DOMAIN="https://github.com/Doometnick/"
-SET PYTHON_EXE="C:\Users\brand\Miniconda3\python.exe"
+
+SET BASE_FOLDER=C:\Users\brand\Documents\MyProjects
+SET PROJECT_NAME=%BASE_FOLDER%\%~1
+SET GIT_CONNECT_SCRIPT=C:\BAT\github_connect.py
+SET GITHUB_USER_DOMAIN=https://github.com/Doometnick/
+SET PYTHON_EXE=C:\Users\brand\Miniconda3\python.exe
+
 
 IF EXIST %PROJECT_NAME% (
 	echo Folder already exists.
 ) ELSE (
 
-cd /d BASE_FOLDER
+cd /d %BASE_FOLDER%
 md %~1
 cd %~1
+
 git init .
 git commit -m "initial commit"
 %PYTHON_EXE% %GIT_CONNECT_SCRIPT% %~1
@@ -29,4 +32,4 @@ git push origin master
 
 )
 
-EXIT /B 0
+EXIT /B %ERRORLEVEL%
