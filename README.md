@@ -23,4 +23,4 @@ After the requirements are met as descriped in Setup, open the command line and 
 ![Screenshot](https://github.com/Doometnick/AutoGitRepo/blob/master/img/gitproject.PNG)
 
 
-_The code has only been designed for and tested on Windows._
+_The code has only been intended for and tested on Windows._
